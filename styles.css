@@ -46,6 +46,12 @@ a { color: inherit; text-decoration: none; }
   justify-content: flex-end;
   padding: 1.5rem var(--gutter);
   background: linear-gradient(to bottom, rgba(10,10,10,0.85), transparent);
+  border-bottom: 0 solid var(--border);
+  transition: border-bottom-width 0.2s ease;
+}
+
+.site-header.scrolled {
+  border-bottom-width: 1px;
 }
 
 .brand {

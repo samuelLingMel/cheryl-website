@@ -1,3 +1,13 @@
+// Header boundary line — only visible once the page has scrolled past the top
+const header = document.querySelector(".site-header");
+if (header) {
+  const updateHeaderScrollState = () => {
+    header.classList.toggle("scrolled", window.scrollY > 0);
+  };
+  updateHeaderScrollState();
+  window.addEventListener("scroll", updateHeaderScrollState, { passive: true });
+}
+
 // Mobile nav toggle
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".site-nav");
